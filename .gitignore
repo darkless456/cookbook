@@ -2,6 +2,8 @@
 logs
 *.log
 npm-debug.log*
+gulpfile.js
+code.docx
 
 # Runtime data
 pids
