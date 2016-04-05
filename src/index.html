@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <title>Libertinism</title>
     <!-- Normalize -->
     <link rel="stylesheet" href="//cdn.bootcss.com/normalize/3.0.3/normalize.min.css" />
     <!-- jQuery Mobile Core CSS-->
@@ -26,14 +26,14 @@
                 <label for="recipe">想要查询的食谱</label>
                 <input type="text" name="recipe" id="recipe" placeholder="输入食物或菜名，支持模糊"/>
             </div>
-            <a href="#" class="ui-btn ui-corner-all ui-shadow" id="searchBtn">开始搜索</a>
+            <input type="button" class="ui-btn ui-corner-all ui-shadow" id="searchBtn" value="开始搜索">
             <ul data-role="listview" data-inset="true" id="book"></ul>
         </div>
         <div data-role="footer" data-position="fixed">
             <div data-role="navbar">
                 <ul>
                     <li><a data-icon="home" href="#index" class="ui-btn-active ui-state-persist">主页</a></li>
-                    <li><a data-icon="heart" href="#fav">收藏</a></li>
+                    <li><a data-icon="heart" href="#fav">热门</a></li>
                     <li><a data-icon="gear" href="#other">其他</a></li>
                 </ul>
             </div>
@@ -41,13 +41,15 @@
     </div>
 
     <div data-role="page" id="fav">
-        <div data-role="header" data-position="fixed"><h1>已收藏菜谱</h1></div>
-        <div data-role="main" class="ui-content"></div>
+        <div data-role="header" data-position="fixed"><h1>本周推荐</h1></div>
+        <div data-role="main" class="ui-content">
+            <ul data-role="listview" data-inset="true" id="favlist"></ul>
+        </div>
         <div data-role="footer" data-position="fixed">
             <div data-role="navbar">
                 <ul>
                     <li><a data-icon="home" href="#index">主页</a></li>
-                    <li><a data-icon="heart" href="#fav" class="ui-btn-active ui-state-persist">收藏</a></li>
+                    <li><a data-icon="heart" href="#fav" class="ui-btn-active ui-state-persist">热门</a></li>
                     <li><a data-icon="gear" href="#other">其他</a></li>
                 </ul>
             </div>
@@ -61,7 +63,7 @@
             <div data-role="navbar">
                 <ul>
                     <li><a data-icon="home" href="#index">主页</a></li>
-                    <li><a data-icon="heart" href="#fav">收藏</a></li>
+                    <li><a data-icon="heart" href="#fav">热门</a></li>
                     <li><a data-icon="gear" href="#other" class="ui-btn-active ui-state-persist">其他</a></li>
                 </ul>
             </div>
@@ -69,16 +71,17 @@
     </div>
 
     <div data-role="page" id="detail">
-        <div data-role="header" data-position="fixed"><h1 id="infoTitle"></h1></div>
+        <div data-role="header" data-position="fixed"><h1 class="ui-icon-arrow-l ui-btn-icon-left" id="infoTitle"></h1></div>
         <div data-role="main" class="ui-content">
             <ul data-role="listview" data-inset="true" id="info"></ul>
-            <a href="#" data-rel="back" data-icon="back" class="ui-btn ui-corner-all">返回上一页</a>            
+            <!-- <span class="ui-btn ui-btn-inline">点赞</span> -->
+            <a href="#" data-rel="back" data-icon="back" class="ui-btn ui-corner-all">返回上一页</a>
         </div>
         <div data-role="footer" data-position="fixed">
             <div data-role="navbar">
                 <ul>
                     <li><a data-icon="home" href="#index">主页</a></li>
-                    <li><a data-icon="heart" href="#fav">收藏</a></li>
+                    <li><a data-icon="heart" href="#fav">热门</a></li>
                     <li><a data-icon="gear" href="#other">其他</a></li>
                 </ul>
             </div>
